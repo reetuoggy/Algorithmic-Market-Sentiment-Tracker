@@ -5,9 +5,9 @@ import datetime
 print("--- Initializing Market Data Fetcher (Fixed Version) ---")
 
 assets = {
-    "Gold": "GC=F",
-    "Silver": "SI=F",
-    "Nifty_50": "^NSEI"
+    "Nifty_50": "^NSEI",
+    "Gold_India": "GOLDBEES.NS",
+    "Silver_India": "SILVERBEES.NS"
 }
 
 end_date = datetime.date.today()
