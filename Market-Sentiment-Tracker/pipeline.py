@@ -6,7 +6,7 @@ print("--- Initializing Bulletproof Data Integration Pipeline ---")
 
 # 1. Configuration
 DB_USER = "root"
-DB_PASS = "Bommineedi123"  # <-- Make sure to put your real password here!
+DB_PASS = "Bommineedi123" 
 DB_HOST = "localhost"
 DB_NAME = "fintech_db"
 
