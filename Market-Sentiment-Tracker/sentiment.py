@@ -3,7 +3,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 print("--- Initializing Sentiment NLP Engine ---")
 
-# 1. Load the raw news data we fetched on Day 3
+# 1. Load the raw news data we fetched
 try:
     df = pd.read_csv("news_headlines_raw.csv")
     print(f"Successfully loaded {len(df)} headlines.")
