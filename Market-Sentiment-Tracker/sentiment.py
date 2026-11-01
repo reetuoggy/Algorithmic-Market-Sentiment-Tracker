@@ -8,7 +8,7 @@ try:
     df = pd.read_csv("news_headlines_raw.csv")
     print(f"Successfully loaded {len(df)} headlines.")
 except FileNotFoundError:
-    print("Error: 'news_headlines_raw.csv' not found. Make sure you ran Day 3's script successfully.")
+    print("Error: 'news_headlines_raw.csv' not found. Make sure you ran previous scripts successfully.")
     exit()
 
 # 2. Initialize VADER Sentiment Analyzer
