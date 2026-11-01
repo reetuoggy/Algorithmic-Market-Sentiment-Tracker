@@ -15,7 +15,24 @@ except FileNotFoundError:
 analyzer = SentimentIntensityAnalyzer()
 
 # Custom financial dictionary
-financial_lexicon = {'bullish': 2.0, 'bearish': -2.0, 'surge': 1.5, 'crash': -2.0, ...}
+financial_lexicon = {
+    'bullish': 2.0,
+    'bearish': -2.0,
+    'surge': 1.5,
+    'crash': -2.0,
+    'dividend': 1.0,
+    'cuts debt': 1.5,
+    'inflation': -1.0,
+    'profit': 1.5,
+    'loss': -1.5,
+    'growth': 1.0,
+    'slump': -1.5,
+    'soars': 1.5,
+    'plunges': -1.5,
+    'tumble': -1.5,
+    'upgrade': 1.0,
+    'downgrade': -1.0
+}
 analyzer.lexicon.update(financial_lexicon)
 
 # Create a function to extract the compound sentiment score
@@ -28,6 +45,8 @@ def get_sentiment_score(headline):
 
 print("Analyzing headlines (this will take just a few seconds)...")
 
+# Vader scores
+# compound = x / √(x² + 15)
 # Apply the scoring function to every row in our Headline column
 df['Sentiment_Score'] = df['Headline'].apply(get_sentiment_score)
 
