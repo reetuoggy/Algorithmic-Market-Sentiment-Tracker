@@ -4,7 +4,7 @@ from sqlalchemy.engine import URL
 
 print("--- Initializing Bulletproof Data Integration Pipeline ---")
 
-# 1. Configuration
+# Configuration
 DB_USER = "root"
 DB_PASS = "Bommineedi123" 
 DB_HOST = "localhost"
@@ -19,7 +19,7 @@ connection_url = URL.create(
 )
 engine = create_engine(connection_url)
 
-# 2. Market Prices Pipeline
+# Market Prices Pipeline
 print("\n--- Processing Market Data ---")
 try:
     # Read the CSV
@@ -44,7 +44,7 @@ try:
 except Exception as e:
     print(f"Error inserting market prices: {e}")
 
-# 3. News Sentiment Pipeline
+# News Sentiment Pipeline
 print("\n--- Processing Sentiment Data ---")
 try:
     sentiment_df = pd.read_csv("news_sentiment_clean.csv")
