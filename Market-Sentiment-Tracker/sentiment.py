@@ -21,6 +21,8 @@ analyzer.lexicon.update(financial_lexicon)
 # Create a function to extract the compound sentiment score
 def get_sentiment_score(headline):
     # VADER analyzes the text and returns a dictionary of scores (pos, neu, neg, compound)
+    if pd.isna(text):
+        return 0
     scores = analyzer.polarity_scores(str(headline))
     return scores['compound'] # Compound is the overall score from -1 to +1
 
