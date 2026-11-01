@@ -9,7 +9,11 @@ API_KEY = "6eb2044ad5174df08b852300c8dd972a"
 BASE_URL = "https://newsapi.org/v2/everything"
 
 # 2. Define topics and timeframe
-topics = ["Gold", "Silver"]
+topics = {
+    "Nifty_50": "Nifty 50 Indian stock market",
+    "Gold_India": "Gold prices India",
+    "Silver_India": "Silver prices India"
+}
 
 # NewsAPI Developer Free Tier allows going back a maximum of 30 days
 end_date = datetime.date.today()
