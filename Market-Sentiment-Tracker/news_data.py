@@ -4,12 +4,11 @@ import datetime
 
 print("--- Initializing News Data Fetcher ---")
 
-# 1. Your API Key Setup
-# Replace with your actual NewsAPI key from Day 1
+# 1. API Key Setup
 API_KEY = "6eb2044ad5174df08b852300c8dd972a"  
 BASE_URL = "https://newsapi.org/v2/everything"
 
-# 2. Define our topics and timeframe
+# 2. Define topics and timeframe
 topics = ["Gold", "Silver"]
 
 # NewsAPI Developer Free Tier allows going back a maximum of 30 days
@@ -22,13 +21,13 @@ all_news = []
 for topic in topics:
     print(f"Fetching news for {topic}...")
     
-    # We build the URL parameters exactly how NewsAPI documentation requires
+    # Build the URL parameters exactly how NewsAPI documentation requires
     params = {
         "q": topic,                      # The search keyword
         "from": start_date.strftime("%Y-%m-%d"), 
         "to": end_date.strftime("%Y-%m-%d"),
         "language": "en",                # English only
-        "sortBy": "popularity",          # Get the most read articles
+        "sortBy": "popularity",          # Gets the most read articles
         "pageSize": 100,                 # Max articles per page on free tier
         "apiKey": API_KEY
     }
