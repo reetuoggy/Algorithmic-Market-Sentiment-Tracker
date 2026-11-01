@@ -22,7 +22,7 @@ start_date = end_date - datetime.timedelta(days=29)
 all_news = []
 
 # 3. Loop through each topic and fetch the news
-for topic in topics:
+for asset_name, search_term in topics.items():
     print(f"Fetching news for {topic}...")
     
     # Build the URL parameters exactly how NewsAPI documentation requires
